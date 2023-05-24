@@ -1,0 +1,19 @@
+type Query{
+    gamerById(id:ID): Gamer
+    gameById(id:ID): Game
+}
+
+type Gamer{
+    id: ID!
+    username: String!
+    password: String!
+    games: [Game]
+}
+
+type Game{
+    id: ID!
+    name: String!
+    producer: String!
+    description: String
+    gamers: [Gamer]
+}
